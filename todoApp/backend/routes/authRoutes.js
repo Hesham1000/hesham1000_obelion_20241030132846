@@ -1,7 +1,7 @@
 const express = require('express');
 const authController = require('../controllers/authController');
 const router = express.Router();
-const db = require('../models'); // Assuming the models are exported from this path
+const db = require('../models/User'); // Assuming the models are exported from this path
 
 router.post('/register', async (req, res) => {
   try {
@@ -26,47 +26,47 @@ router.post('/login', async (req, res) => {
 module.exports = router;
 
 // Inside models/index.js or wherever the database connection is configured
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize(process.env.DATABASE_URL || 'mysql://user:pass@db/dbname', {
-  dialect: 'mysql',
-  host: 'db'
-});
+// const Sequelize = require('sequelize');
+// const sequelize = new Sequelize(process.env.DATABASE_URL || 'mysql://user:pass@db/dbname', {
+//   dialect: 'mysql',
+//   host: 'db'
+// });
 
-const User = sequelize.define('User', {
-  id: {
-    type: Sequelize.INTEGER,
-    autoIncrement: true,
-    primaryKey: true
-  },
-  email: {
-    type: Sequelize.STRING,
-    allowNull: false,
-    unique: true
-  },
-  password: {
-    type: Sequelize.STRING,
-    allowNull: false
-  }
-}, {
-  tableName: 'users'
-});
+// const User = sequelize.define('User', {
+//   id: {
+//     type: Sequelize.INTEGER,
+//     autoIncrement: true,
+//     primaryKey: true
+//   },
+//   email: {
+//     type: Sequelize.STRING,
+//     allowNull: false,
+//     unique: true
+//   },
+//   password: {
+//     type: Sequelize.STRING,
+//     allowNull: false
+//   }
+// }, {
+//   tableName: 'users'
+// });
 
-module.exports = {
-  sequelize,
-  User
-};
+// module.exports = {
+//   sequelize,
+//   User
+// };
 
-// Updated seed_users.js
-module.exports = {
-  up: (queryInterface, Sequelize) => queryInterface.bulkInsert('users', [
-    {
-      email: '[email1]',
-      password: '[hashedPassword1]'
-    },
-    {
-      email: '[email2]',
-      password: '[hashedPassword2]'
-    }
-  ]),
-  down: (queryInterface, Sequelize) => queryInterface.bulkDelete('users', null, {})
-};
+// // Updated seed_users.js
+// module.exports = {
+//   up: (queryInterface, Sequelize) => queryInterface.bulkInsert('users', [
+//     {
+//       email: '[email1]',
+//       password: '[hashedPassword1]'
+//     },
+//     {
+//       email: '[email2]',
+//       password: '[hashedPassword2]'
+//     }
+//   ]),
+//   down: (queryInterface, Sequelize) => queryInterface.bulkDelete('users', null, {})
+// };

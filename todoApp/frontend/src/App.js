@@ -1,10 +1,10 @@
 import React from 'react';
-import './RegistrationForm.css';
-import './LoginForm.css';
-import './TaskCreationForm.css';
-import RegistrationForm from './RegistrationForm';
-import LoginForm from './LoginForm';
-import TaskCreationForm from './TaskCreationForm';
+import './components/RegistrationForm.css';
+import './components/LoginForm.css';
+import './components/TaskCreationForm.css';
+import RegistrationForm from './components/RegistrationForm';
+import LoginForm from './components/LoginForm';
+import TaskCreationForm from './components/TaskCreationForm';
 
 function App() {
   return (
