@@ -13,8 +13,9 @@
         "react-router-dom": "latest"
     },
     "devDependencies": {
-        "webpack": "latest",
-        "eslint": "latest"
+        "react": "17.0.2",
+        "eslint": "latest",
+        "webpack": "latest"
     },
     "browserslist": {
         "production": [

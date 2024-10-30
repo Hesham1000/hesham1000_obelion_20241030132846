@@ -9,12 +9,13 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "sequelize": "latest",
-        "express": "latest",
+        "sequelize": "6.6.5",
+        "express": "4.17.1",
         "jsonwebtoken": "8.5.1",
         "nodemailer": "8.1.1"
     },
     "devDependencies": {
+        "sequelize": "6.6.5",
         "eslint": "7.32.0",
         "bcrypt": "5.0.1",
         "jsonwebtoken": "8.5.1",
